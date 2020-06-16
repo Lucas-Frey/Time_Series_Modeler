@@ -129,9 +129,7 @@ class ParallelPrinter:
                          if self.proc_job_dict[proc] > job_num]
 
         if not self.job_time_tracker.iloc[job_num, non_min_procs].isnull().values.any():
-            print('Done {:}'.format(str(job_num)))
-            # self.print_parallel_message(job_num)
-
+            self.print_parallel_message(job_num)
 
     def print_jobs_completed(self):
         current_time = datetime.datetime.now().time().replace(microsecond=0)
